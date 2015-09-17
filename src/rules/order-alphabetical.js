@@ -14,8 +14,11 @@ CSSLint.addRule({
     init: function(parser, reporter){
         "use strict";
         var rule = this,
-            properties = [],
-            startRule = function() {};
+            properties;
+
+        var startRule = function () {
+            properties = [];
+        };
 
         var endRule = function(event){
             var currentProperties = properties.join(","),
